@@ -17,6 +17,22 @@
             <input type="text" name="kolom" id="kolom"> <br><br>
             <button type="submit" name="submit"  value="submit">SUBMIT</button>
         </fieldset>
-    </form>   
+    </form>
+    <?php 
+        if (isset($_GET['submit'])) {
+            $Jbaris = $_GET['baris'];
+            $Jkolom = $_GET['kolom'];
+        }
+        $i=0;
+        $j=0;
+        while ($i<=$Jbaris){
+            if ($j<=$Jkolom){
+                echo "<tr>"."kolom"."</tr>";
+            }
+            echo "<td>"."baris". "</td>"; 
+            $i++;
+        }
+    ?>
+    <table></table>
 </body>
 </html>
